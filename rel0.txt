@@ -1,0 +1,10 @@
+JoaoDias 	ist1 75 741
+ManuelPinto	ist1 75 973
+
+O FileSystemManager e' responsa'vel por criar, abrir, gravar e aceder ao sistema de ficheiros.
+Quando e necessario aceder e/ou alterar o sistema de ficheiros, o manager devolve o sistema de ficheiros atual, e o comando executa as acoes sobre este sistema.
+
+A classe FileSystem realiza todas as operacoes disponiveis sobre o sistema, nomeadamente aceder/alterar ficheiros e diretorias e criar e remover utilizadores.
+Os utilizadores podem ser utilizadores com permissoes limitadas (como a generalidade dos utilizadores) ou podem nao ter limitacoes no acesso e modificacao do sistema de ficheiros (ROOT). Optou-se por criar uma subclasse de USER: ROOT, para se verificar se um utilizadoe' um utilizador generico ou o utilizador root, pois consideramos que verificar isto atraves do username ou do name, poderia nao ser tao eficaz ou eficiente. Assim verifica-se se o utilizadoe' uma instancia da classe ROOT.
+O sistema de ficheiros tem uma diretoria (diretoria raiz "/"). Por sua vez, esta diretoria pode contem entradas (que podem ser outras diretorias ou ficheiros). Alem disso, o sistema de ficheiro mantem tambem guardada a indicacao da diretoria atual para que todas as acoes que sejam efetuadas pelo utilizador sejam relativas a essa mesma diretoria.
+A classe ficheiro tem apenas um atributo (excepto aqueles que herda da classe entrada) que e o seu conteudo. Nao consideramos o tamanho de um ficheiro como um atributo do mesmo, porque este vai ser calculado sempre que for necessario.

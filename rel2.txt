@@ -1,0 +1,12 @@
+JoaoDias        ist1 75 741
+ManuelPinto     ist1 75 973
+
+para a entrega final, implementaram-se as restantes classes do core, e todos os comandos do textui.
+para evitar a utilizacao da condicao instanceof (o que faz com o que o codigo deixe de ser orientado a objectos,
+pois estamos a focar-nos no tipo de objectos, e nao estamos a atribuir as responsabilidades às entidades certas),
+definimos metodos auxiliares como por exemplo o isCDable, para verificar se uma entidade permite executar a operacao CD
+ou nao. Caso seja possivel, o metodo isCDable e redefinido na subclasse que o permite, caso contrario a entidade ira recorrer
+ao metodo definido na classe abstrata (Entry).
+para as restantes situacoes utilizaram-se metodos semelhantes, alterando apenas a funcionalidade dos metodos.
+
+

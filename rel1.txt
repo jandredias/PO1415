@@ -1,0 +1,10 @@
+JoaoDias 	ist1 75 741
+ManuelPinto	ist1 75 973
+
+Foram implementadas todas as classes e instancias referidas no UML da entrega anterior com relativas poucas alteracoes o esquema original.
+O FileSystemManager, anteriormente, devolvia o FileSystem e o text-ui era o responsavel por executar todas as operacoes sobre este. Na versao presente todas as acoes sao executadas pelo FileSystemManager, sem ser necessaria alguma funcionalidade adicional no textui.
+Devido a necessidade de complementar algum do codigo que foi desenvolvido e para permitir um nivel de abstracao procedimental mais confortavel ao desenvolvimento foram implementadas algumas funcoes adicionais, boa parte destas "getters".
+E de notar que todas as excecoes (Exceptions) lancadas por todas as classes sao apanhadas pelo textui que , assim, lanca as excecoes do suporte. Nenhuma das "nossas" excecoes sai como output direto, tudo isto e tratado pelo textui.
+
+De um modo muito geral o projeto segue um padrão de desenho Composite. O FileSystemManager pode ter vários FileSystems , todos os FileSystems tem um utilizador Root com privilégios acrescidos,
+para além disso o FileSystem tem uma diretoria que é "/", e esta Directoria pode conter la Entrys que podem ser Directorias ou Ficheiros.
